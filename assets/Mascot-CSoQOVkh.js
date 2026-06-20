@@ -1,0 +1,6 @@
+var e=[`Cố lên nào! 💪`,`Tuyệt vời lắm! 🌟`,`Astro tin bạn! 🚀`,`Hãy tiếp tục nhé! ✨`,`Giỏi quá đi! 🎉`,`Bạn là ngôi sao! ⭐`,`Thật siêu! 🏆`,`Astro tự hào về bạn! 💖`],t=null,n=!1;function r(){if(t&&document.body.contains(t))return;t=document.createElement(`div`),t.className=`mascot`,t.innerHTML=`
+    <div class="mascot-bubble hidden" id="mascot-bubble">
+      ${e[0]}
+    </div>
+    <div class="mascot-avatar" id="mascot-avatar">🧑‍🚀</div>
+  `,document.body.appendChild(t);let r=t.querySelector(`#mascot-avatar`),i=t.querySelector(`#mascot-bubble`);r.addEventListener(`click`,()=>{n=!n,n?(i.textContent=e[Math.floor(Math.random()*e.length)],i.classList.remove(`hidden`)):i.classList.add(`hidden`)}),setTimeout(()=>{n||(i.textContent=e[Math.floor(Math.random()*e.length)],i.classList.remove(`hidden`),n=!0,setTimeout(()=>{i.classList.add(`hidden`),n=!1},4e3))},5e3)}function i(e){if(!t)return;let r=t.querySelector(`#mascot-bubble`);r&&(r.textContent=e,r.classList.remove(`hidden`),n=!0,setTimeout(()=>{r.classList.add(`hidden`),n=!1},4e3))}export{r as renderMascot,i as showMascotMessage};
