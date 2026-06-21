@@ -7,25 +7,31 @@ export function playTTS(text) {
   utterance.lang = 'vi-VN'; 
   
   const voices = window.speechSynthesis.getVoices();
-  // Ưu tiên các giọng nữ tự nhiên, dễ nghe: Microsoft Hoài My (Edge), Google (Chrome), Linh (iOS/Mac)
-  const preferredVoices = voices.filter(v => 
-    v.lang.includes('vi') && 
-    (v.name.includes('HoaiMy') || v.name.includes('Google') || v.name.includes('Linh'))
+  const viVoices = voices.filter(v => v.lang.toLowerCase().includes('vi'));
+  
+  // Try to find a female/teacher-like voice
+  let bestVoice = viVoices.find(v => 
+    v.name.toLowerCase().includes('hoaimy') || 
+    v.name.toLowerCase().includes('linh') || 
+    v.name.toLowerCase().includes('google') ||
+    v.name.toLowerCase().includes('female') ||
+    v.name.toLowerCase().includes('vic') // Android female voice
   );
   
-  if (preferredVoices.length > 0) {
-    const bestVoice = preferredVoices.find(v => v.name.includes('HoaiMy')) || preferredVoices[0];
+  if (!bestVoice && viVoices.length > 0) {
+    bestVoice = viVoices[0];
+  }
+  
+  if (bestVoice) {
     utterance.voice = bestVoice;
   }
   
-  // Điều chỉnh giọng cô giáo tiểu học: chậm rãi, ấm áp, truyền cảm
-  utterance.rate = 0.75;  // Nói thật chậm để bé dễ nghe
-  utterance.pitch = 1.2;  // Tông giọng cao và ấm áp hơn
+  utterance.rate = 0.65;  // Rất chậm
+  utterance.pitch = 1.3;  // Ấm, cao
   
   window.speechSynthesis.speak(utterance);
 }
 
-// Pre-load voices (Chrome cần cái này để lấy danh sách giọng)
 if ('speechSynthesis' in window) {
   window.speechSynthesis.onvoiceschanged = () => {
     window.speechSynthesis.getVoices();
