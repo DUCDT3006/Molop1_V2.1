@@ -6,7 +6,7 @@ import{a as e,c as t,i as n,n as r}from"./state-BDdBsVRV.js";function i(i,a){let
       </div>
       <div class="game-container">
         <div class="section-badge practice">🎮 Thực hành - Coding</div>
-        <div class="instruction-box">${u.instruction}</div>
+        <div class="instruction-box">${u.instruction} <button class="tts-btn" onclick="playTTS(this.dataset.text)" data-text="${String(`${u.instruction}`).replace(/\"/g,`&quot;`).replace(/<[^>]*>?/gm,``)}">🔊</button></div>
         
         <div class="target-word">
           Từ cần ghép: <span>"${u.targetWord}"</span>

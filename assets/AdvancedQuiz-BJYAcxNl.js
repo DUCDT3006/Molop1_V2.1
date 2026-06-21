@@ -17,7 +17,7 @@ import{a as e,c as t,i as n,n as r}from"./state-BDdBsVRV.js";function i(i,a){let
           <div style="text-align:right;font-size:0.85rem;color:var(--text-muted);margin-bottom:12px">
             ⏱️ <span id="timer-text">${h}s</span>
           </div>
-          <div class="question-text">${e.text}</div>
+          <div class="question-text">${e.text} <button class="tts-btn" onclick="playTTS(this.dataset.text)" data-text="${String(`${e.text}`).replace(/\"/g,`&quot;`).replace(/<[^>]*>?/gm,``)}">🔊</button></div>
           ${e.image?`<div style="text-align:center;font-size:2.5rem;margin:12px 0;letter-spacing:8px">${e.image}</div>`:``}
           <div class="quiz-options">
             ${e.options.map(e=>`<button class="quiz-option" data-val="${e}">${e}</button>`).join(``)}
