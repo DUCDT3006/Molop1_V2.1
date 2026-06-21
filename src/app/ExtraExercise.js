@@ -24,7 +24,9 @@ export function renderExtraExercise(container, params) {
         <div class="section-badge" style="background:linear-gradient(135deg,#9B59B6,#8E44AD)">👨‍👩‍👧 Phụ huynh hướng dẫn</div>
         <div class="instruction-box">
           💡 <strong>Dành cho phụ huynh:</strong> Chọn mức độ phù hợp để bé luyện thêm. Các bài tập được tạo từ nội dung đã học trong ngày.
-        </div>
+         <button class="tts-btn" onclick="playTTS(this.dataset.text)" data-text="${String(`
+          💡 <strong>Dành cho phụ huynh:</strong> Chọn mức độ phù hợp để bé luyện thêm. Các bài tập được tạo từ nội dung đã học trong ngày.
+        `).replace(/\"/g, '&quot;').replace(/<[^>]*>?/gm, '')}">🔊</button></div>
         <div class="level-select-grid">
           <div class="level-card unlocked" data-mode="review">
             <div class="level-emoji">📖</div>
@@ -127,7 +129,7 @@ export function renderExtraExercise(container, params) {
             <div class="progress-bar" style="margin-bottom:20px">
               <div class="progress-bar-fill" style="width:${(currentQ / questions.length) * 100}%"></div>
             </div>
-            <div class="question-text">${q.text}</div>
+            <div class="question-text">${q.text} <button class="tts-btn" onclick="playTTS(this.dataset.text)" data-text="${String(`${q.text}`).replace(/\"/g, '&quot;').replace(/<[^>]*>?/gm, '')}">🔊</button></div>
             ${q.image ? `<div style="text-align:center;font-size:2.5rem;margin:12px 0;letter-spacing:8px">${q.image}</div>` : ''}
             <div class="quiz-options">
               ${q.options.map(opt => `<button class="quiz-option" data-val="${opt}">${opt}</button>`).join('')}

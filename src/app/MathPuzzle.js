@@ -49,7 +49,7 @@ export function renderMathPuzzle(container, params) {
             <div class="progress-bar-fill" style="width:${(currentQ / puzzles.length) * 100}%"></div>
           </div>
 
-          <div class="question-text">${q.text}</div>
+          <div class="question-text">${q.text} <button class="tts-btn" onclick="playTTS(this.dataset.text)" data-text="${String(`${q.text}`).replace(/\"/g, '&quot;').replace(/<[^>]*>?/gm, '')}">🔊</button></div>
 
           ${q.image ? `<div class="puzzle-visual">${q.image}</div>` : ''}
           ${q.illustration ? `<div class="puzzle-illustration">${q.illustration}</div>` : ''}

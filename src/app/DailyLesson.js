@@ -78,7 +78,7 @@ export function renderDailyLesson(container, params) {
       <div class="star-counter">⭐ ${state.stars}</div>
     </div>
     <div class="daily-container">
-      <div class="instruction-box">${lesson.theme}</div>
+      <div class="instruction-box">${lesson.theme} <button class="tts-btn" onclick="playTTS(this.dataset.text)" data-text="${String(`${lesson.theme}`).replace(/\"/g, '&quot;').replace(/<[^>]*>?/gm, '')}">🔊</button></div>
 
       ${lesson.curriculumRef ? `<div class="curriculum-ref">📋 Theo CT GDPT 2018: ${lesson.curriculumRef}</div>` : ''}
 

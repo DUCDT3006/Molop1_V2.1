@@ -43,7 +43,7 @@ export function renderSupermarket(container, params) {
       </div>
       <div class="game-container">
         <div class="section-badge practice">🎮 Thực hành - Siêu thị</div>
-        <div class="instruction-box">${shop.instruction}</div>
+        <div class="instruction-box">${shop.instruction} <button class="tts-btn" onclick="playTTS(this.dataset.text)" data-text="${String(`${shop.instruction}`).replace(/\"/g, '&quot;').replace(/<[^>]*>?/gm, '')}">🔊</button></div>
 
         <div class="budget-display ${overBudget ? 'over-budget' : ''}">
           💰 Ví tiền: <span class="budget-amount">${shop.budget} xu</span>

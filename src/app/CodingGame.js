@@ -35,7 +35,7 @@ export function renderCodingGame(container, params) {
       </div>
       <div class="game-container">
         <div class="section-badge practice">🎮 Thực hành - Coding</div>
-        <div class="instruction-box">${coding.instruction}</div>
+        <div class="instruction-box">${coding.instruction} <button class="tts-btn" onclick="playTTS(this.dataset.text)" data-text="${String(`${coding.instruction}`).replace(/\"/g, '&quot;').replace(/<[^>]*>?/gm, '')}">🔊</button></div>
         
         <div class="target-word">
           Từ cần ghép: <span>"${coding.targetWord}"</span>

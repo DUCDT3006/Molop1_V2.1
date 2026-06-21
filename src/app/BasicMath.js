@@ -24,13 +24,13 @@ export function renderBasicMath(container, params) {
       </div>
       <div class="game-container">
         <div class="section-badge basic">📚 Cơ bản - Toán</div>
-        <div class="instruction-box">${lesson.basicMath.instruction}</div>
+        <div class="instruction-box">${lesson.basicMath.instruction} <button class="tts-btn" onclick="playTTS(this.dataset.text)" data-text="${String(`${lesson.basicMath.instruction}`).replace(/\"/g, '&quot;').replace(/<[^>]*>?/gm, '')}">🔊</button></div>
         <div class="game-card">
           <div class="question-counter">Câu ${currentQ + 1} / ${questions.length}</div>
           <div class="progress-bar" style="margin-bottom:20px">
             <div class="progress-bar-fill" style="width:${(currentQ / questions.length) * 100}%"></div>
           </div>
-          <div class="question-text">${q.text}</div>
+          <div class="question-text">${q.text} <button class="tts-btn" onclick="playTTS(this.dataset.text)" data-text="${String(`${q.text}`).replace(/\"/g, '&quot;').replace(/<[^>]*>?/gm, '')}">🔊</button></div>
           <div class="quiz-options" id="options">
             ${q.options.map((opt, i) => `<button class="quiz-option" data-val="${opt}" id="opt-${i}">${opt}</button>`).join('')}
           </div>

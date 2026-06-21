@@ -47,7 +47,7 @@ export function renderAdvancedQuiz(container, params) {
           <div style="text-align:right;font-size:0.85rem;color:var(--text-muted);margin-bottom:12px">
             ⏱️ <span id="timer-text">${timeLeft}s</span>
           </div>
-          <div class="question-text">${q.text}</div>
+          <div class="question-text">${q.text} <button class="tts-btn" onclick="playTTS(this.dataset.text)" data-text="${String(`${q.text}`).replace(/\"/g, '&quot;').replace(/<[^>]*>?/gm, '')}">🔊</button></div>
           ${q.image ? `<div style="text-align:center;font-size:2.5rem;margin:12px 0;letter-spacing:8px">${q.image}</div>` : ''}
           <div class="quiz-options">
             ${q.options.map(opt => `<button class="quiz-option" data-val="${opt}">${opt}</button>`).join('')}

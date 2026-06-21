@@ -2,6 +2,9 @@
    Molop1 V2.1 - Main App Entry & Router
    ==================================== */
 import './style.css';
+import { playTTS } from './utils/audio.js';
+
+window.playTTS = playTTS;
 
 const app = document.getElementById('app');
 

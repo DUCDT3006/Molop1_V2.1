@@ -67,7 +67,7 @@ export function renderBossFight(container, params) {
           <div class="progress-bar" style="margin-bottom:16px">
             <div class="progress-bar-fill" style="width:${(currentQ / questions.length) * 100}%"></div>
           </div>
-          <div class="question-text">${q.text}</div>
+          <div class="question-text">${q.text} <button class="tts-btn" onclick="playTTS(this.dataset.text)" data-text="${String(`${q.text}`).replace(/\"/g, '&quot;').replace(/<[^>]*>?/gm, '')}">🔊</button></div>
           <div class="quiz-options">
             ${q.options.map(opt => `<button class="quiz-option" data-val="${opt}">${opt}</button>`).join('')}
           </div>

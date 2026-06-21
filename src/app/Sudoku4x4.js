@@ -30,7 +30,7 @@ export function renderSudoku(container, params) {
       </div>
       <div class="game-container">
         <div class="section-badge practice">🎮 Thực hành - Sudoku</div>
-        <div class="instruction-box">Chọn trình độ bạn muốn chơi!</div>
+        <div class="instruction-box">Chọn trình độ bạn muốn chơi! <button class="tts-btn" onclick="playTTS(this.dataset.text)" data-text="${String(`Chọn trình độ bạn muốn chơi!`).replace(/\"/g, '&quot;').replace(/<[^>]*>?/gm, '')}">🔊</button></div>
         <div class="level-select-grid">
           ${levels.map(lv => `
             <div class="level-card ${lv.unlocked ? 'unlocked' : 'locked'}" data-level="${lv.id}">
@@ -100,7 +100,7 @@ export function renderSudoku(container, params) {
         </div>
         <div class="game-container">
           <div class="section-badge practice">🎮 Level ${level}</div>
-          <div class="instruction-box">Điền emoji sao cho mỗi hàng và mỗi cột đều có đủ ${size} loại emoji khác nhau!</div>
+          <div class="instruction-box">Điền emoji sao cho mỗi hàng và mỗi cột đều có đủ ${size} loại emoji khác nhau! <button class="tts-btn" onclick="playTTS(this.dataset.text)" data-text="${String(`Điền emoji sao cho mỗi hàng và mỗi cột đều có đủ ${size} loại emoji khác nhau!`).replace(/\"/g, '&quot;').replace(/<[^>]*>?/gm, '')}">🔊</button></div>
           <div style="text-align:center">
             <div class="sudoku-grid sudoku-${size}x${size}" id="sudoku-grid">
               ${grid.map((row, r) => row.map((val, c) => {

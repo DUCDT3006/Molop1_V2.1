@@ -22,7 +22,7 @@ export function renderBasicVietnamese(container, params) {
       </div>
       <div class="game-container">
         <div class="section-badge basic">📚 Cơ bản - Tiếng Việt</div>
-        <div class="instruction-box">${bv.instruction}</div>
+        <div class="instruction-box">${bv.instruction} <button class="tts-btn" onclick="playTTS(this.dataset.text)" data-text="${String(`${bv.instruction}`).replace(/\"/g, '&quot;').replace(/<[^>]*>?/gm, '')}">🔊</button></div>
         <div class="reading-card">
           <div class="passage-title">📄 ${bv.passage.title}</div>
           <div class="passage-text">${bv.passage.text}</div>
@@ -54,7 +54,7 @@ export function renderBasicVietnamese(container, params) {
           <div class="progress-bar" style="margin-bottom:20px">
             <div class="progress-bar-fill" style="width:${(currentQ / bv.questions.length) * 100}%"></div>
           </div>
-          <div class="question-text">${q.text}</div>
+          <div class="question-text">${q.text} <button class="tts-btn" onclick="playTTS(this.dataset.text)" data-text="${String(`${q.text}`).replace(/\"/g, '&quot;').replace(/<[^>]*>?/gm, '')}">🔊</button></div>
           <div class="quiz-options">
             ${q.options.map((opt, i) => `<button class="quiz-option" data-val="${opt}">${opt}</button>`).join('')}
           </div>
