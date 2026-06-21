@@ -21,17 +21,9 @@ export function playTTS(text) {
   audio.playbackRate = 0.85; 
   
   audio.play().catch(e => {
-    console.warn("Google TTS bị chặn, dùng tạm bộ đọc của máy...", e);
-    fallbackTTS(text);
+    console.error("Google TTS bị chặn hoặc lỗi mạng:", e);
+    alert("Không thể tải giọng cô giáo. Vui lòng kiểm tra lại kết nối mạng hoặc thử trình duyệt khác.");
   });
   
   currentAudio = audio;
-}
-
-function fallbackTTS(text) {
-  if (!('speechSynthesis' in window)) return;
-  const utterance = new SpeechSynthesisUtterance(text);
-  utterance.lang = 'vi-VN';
-  utterance.rate = 0.8;
-  window.speechSynthesis.speak(utterance);
 }
