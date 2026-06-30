@@ -38,7 +38,7 @@ import{a as e,c as t,i as n,n as r,o as i}from"./state-BDdBsVRV.js";function a(a
           <div class="progress-bar" style="margin-bottom:16px">
             <div class="progress-bar-fill" style="width:${f/d.length*100}%"></div>
           </div>
-          <div class="question-text">${e.text} <button class="tts-btn" onclick="playTTS(this.dataset.text)" data-text="${String(`${e.text}`).replace(/\"/g,`&quot;`).replace(/<[^>]*>?/gm,``)}">🔊</button></div>
+          <div class="question-text">${e.text} <button class="tts-btn" onclick="playTTS(this.dataset.text, this)" data-text="${String(`${e.text}`).replace(/\"/g,`&quot;`).replace(/<[^>]*>?/gm,``)}">🔊</button></div>
           <div class="quiz-options">
             ${e.options.map(e=>`<button class="quiz-option" data-val="${e}">${e}</button>`).join(``)}
           </div>

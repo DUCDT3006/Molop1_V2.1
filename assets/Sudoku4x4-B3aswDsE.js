@@ -6,7 +6,7 @@ import{a as e,c as t,i as n,n as r}from"./state-BDdBsVRV.js";function i(i,a){let
       </div>
       <div class="game-container">
         <div class="section-badge practice">🎮 Thực hành - Sudoku</div>
-        <div class="instruction-box">Chọn trình độ bạn muốn chơi! <button class="tts-btn" onclick="playTTS(this.dataset.text)" data-text="${`Chọn trình độ bạn muốn chơi!`.replace(/\"/g,`&quot;`).replace(/<[^>]*>?/gm,``)}">🔊</button></div>
+        <div class="instruction-box">Chọn trình độ bạn muốn chơi! <button class="tts-btn" onclick="playTTS(this.dataset.text, this)" data-text="${`Chọn trình độ bạn muốn chơi!`.replace(/\"/g,`&quot;`).replace(/<[^>]*>?/gm,``)}">🔊</button></div>
         <div class="level-select-grid">
           ${e.map(e=>`
             <div class="level-card ${e.unlocked?`unlocked`:`locked`}" data-level="${e.id}">
@@ -25,7 +25,7 @@ import{a as e,c as t,i as n,n as r}from"./state-BDdBsVRV.js";function i(i,a){let
         </div>
         <div class="game-container">
           <div class="section-badge practice">🎮 Level ${t}</div>
-          <div class="instruction-box">Điền emoji sao cho mỗi hàng và mỗi cột đều có đủ ${a} loại emoji khác nhau! <button class="tts-btn" onclick="playTTS(this.dataset.text)" data-text="${String(`Điền emoji sao cho mỗi hàng và mỗi cột đều có đủ ${a} loại emoji khác nhau!`).replace(/\"/g,`&quot;`).replace(/<[^>]*>?/gm,``)}">🔊</button></div>
+          <div class="instruction-box">Điền emoji sao cho mỗi hàng và mỗi cột đều có đủ ${a} loại emoji khác nhau! <button class="tts-btn" onclick="playTTS(this.dataset.text, this)" data-text="${String(`Điền emoji sao cho mỗi hàng và mỗi cột đều có đủ ${a} loại emoji khác nhau!`).replace(/\"/g,`&quot;`).replace(/<[^>]*>?/gm,``)}">🔊</button></div>
           <div style="text-align:center">
             <div class="sudoku-grid sudoku-${a}x${a}" id="sudoku-grid">
               ${f.map((e,t)=>e.map((e,n)=>{let i=r.initial[t][n]!==-1,a=e===-1,o=h&&h[0]===t&&h[1]===n,s=`sudoku-cell`;i?s+=` filled`:a&&(s+=` empty`),o&&(s+=` selected`);let l=e===-1?``:c[e];return`<div class="${s}" data-r="${t}" data-c="${n}">${l}</div>`}).join(``)).join(``)}

@@ -15,7 +15,7 @@ import{a as e,c as t,i as n,n as r}from"./state-BDdBsVRV.js";function i(i,a){let
             <div class="progress-bar-fill" style="width:${d/u.length*100}%"></div>
           </div>
 
-          <div class="question-text">${e.text} <button class="tts-btn" onclick="playTTS(this.dataset.text)" data-text="${String(`${e.text}`).replace(/\"/g,`&quot;`).replace(/<[^>]*>?/gm,``)}">🔊</button></div>
+          <div class="question-text">${e.text} <button class="tts-btn" onclick="playTTS(this.dataset.text, this)" data-text="${String(`${e.text}`).replace(/\"/g,`&quot;`).replace(/<[^>]*>?/gm,``)}">🔊</button></div>
 
           ${e.image?`<div class="puzzle-visual">${e.image}</div>`:``}
           ${e.illustration?`<div class="puzzle-illustration">${e.illustration}</div>`:``}

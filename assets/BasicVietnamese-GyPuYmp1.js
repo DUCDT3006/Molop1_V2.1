@@ -6,7 +6,7 @@ import{a as e,c as t,i as n,n as r}from"./state-BDdBsVRV.js";function i(i,a){let
       </div>
       <div class="game-container">
         <div class="section-badge basic">📚 Cơ bản - Tiếng Việt</div>
-        <div class="instruction-box">${u.instruction} <button class="tts-btn" onclick="playTTS(this.dataset.text)" data-text="${String(`${u.instruction}`).replace(/\"/g,`&quot;`).replace(/<[^>]*>?/gm,``)}">🔊</button></div>
+        <div class="instruction-box">${u.instruction} <button class="tts-btn" onclick="playTTS(this.dataset.text, this)" data-text="${String(`${u.instruction}`).replace(/\"/g,`&quot;`).replace(/<[^>]*>?/gm,``)}">🔊</button></div>
         <div class="reading-card">
           <div class="passage-title">📄 ${u.passage.title}</div>
           <div class="passage-text">${u.passage.text}</div>
@@ -31,7 +31,7 @@ import{a as e,c as t,i as n,n as r}from"./state-BDdBsVRV.js";function i(i,a){let
           <div class="progress-bar" style="margin-bottom:20px">
             <div class="progress-bar-fill" style="width:${d/u.questions.length*100}%"></div>
           </div>
-          <div class="question-text">${e.text} <button class="tts-btn" onclick="playTTS(this.dataset.text)" data-text="${String(`${e.text}`).replace(/\"/g,`&quot;`).replace(/<[^>]*>?/gm,``)}">🔊</button></div>
+          <div class="question-text">${e.text} <button class="tts-btn" onclick="playTTS(this.dataset.text, this)" data-text="${String(`${e.text}`).replace(/\"/g,`&quot;`).replace(/<[^>]*>?/gm,``)}">🔊</button></div>
           <div class="quiz-options">
             ${e.options.map((e,t)=>`<button class="quiz-option" data-val="${e}">${e}</button>`).join(``)}
           </div>

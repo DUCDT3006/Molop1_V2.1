@@ -6,13 +6,13 @@ import{a as e,c as t,i as n,n as r}from"./state-BDdBsVRV.js";function i(i,a){let
       </div>
       <div class="game-container">
         <div class="section-badge basic">📚 Cơ bản - Toán</div>
-        <div class="instruction-box">${c.basicMath.instruction} <button class="tts-btn" onclick="playTTS(this.dataset.text)" data-text="${String(`${c.basicMath.instruction}`).replace(/\"/g,`&quot;`).replace(/<[^>]*>?/gm,``)}">🔊</button></div>
+        <div class="instruction-box">${c.basicMath.instruction} <button class="tts-btn" onclick="playTTS(this.dataset.text, this)" data-text="${String(`${c.basicMath.instruction}`).replace(/\"/g,`&quot;`).replace(/<[^>]*>?/gm,``)}">🔊</button></div>
         <div class="game-card">
           <div class="question-counter">Câu ${d+1} / ${u.length}</div>
           <div class="progress-bar" style="margin-bottom:20px">
             <div class="progress-bar-fill" style="width:${d/u.length*100}%"></div>
           </div>
-          <div class="question-text">${e.text} <button class="tts-btn" onclick="playTTS(this.dataset.text)" data-text="${String(`${e.text}`).replace(/\"/g,`&quot;`).replace(/<[^>]*>?/gm,``)}">🔊</button></div>
+          <div class="question-text">${e.text} <button class="tts-btn" onclick="playTTS(this.dataset.text, this)" data-text="${String(`${e.text}`).replace(/\"/g,`&quot;`).replace(/<[^>]*>?/gm,``)}">🔊</button></div>
           <div class="quiz-options" id="options">
             ${e.options.map((e,t)=>`<button class="quiz-option" data-val="${e}" id="opt-${t}">${e}</button>`).join(``)}
           </div>

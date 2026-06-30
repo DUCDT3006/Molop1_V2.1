@@ -26,7 +26,7 @@ import{c as e,n as t,r as n,t as r}from"./state-BDdBsVRV.js";function i(i,a){let
       <div class="star-counter">⭐ ${l.stars}</div>
     </div>
     <div class="daily-container">
-      <div class="instruction-box">${c.theme} <button class="tts-btn" onclick="playTTS(this.dataset.text)" data-text="${String(`${c.theme}`).replace(/\"/g,`&quot;`).replace(/<[^>]*>?/gm,``)}">🔊</button></div>
+      <div class="instruction-box">${c.theme} <button class="tts-btn" onclick="playTTS(this.dataset.text, this)" data-text="${String(`${c.theme}`).replace(/\"/g,`&quot;`).replace(/<[^>]*>?/gm,``)}">🔊</button></div>
 
       ${c.curriculumRef?`<div class="curriculum-ref">📋 Theo CT GDPT 2018: ${c.curriculumRef}</div>`:``}
 
