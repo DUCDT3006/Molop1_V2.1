@@ -1,4 +1,4 @@
-import{t as e}from"./index-BWB-Xbge.js";import{a as t,c as n,i as r,n as i}from"./state-BDdBsVRV.js";import{t as a}from"./ttsTextRegistry-1tOQuBp5.js";function o(o,s){let{week:c,day:l}=s,u=n(c,l),d=i();if(!u){o.innerHTML=`<div style="padding:40px;text-align:center"><h2>Không tìm thấy bài học</h2></div>`;return}let f=null;function p(){u.extraExercises,o.innerHTML=`
+import{t as e}from"./index-DdBWtAAQ.js";import{a as t,c as n,i as r,n as i}from"./state-BDdBsVRV.js";import{t as a}from"./ttsTextRegistry-1tOQuBp5.js";function o(o,s){let{week:c,day:l}=s,u=n(c,l),d=i();if(!u){o.innerHTML=`<div style="padding:40px;text-align:center"><h2>Không tìm thấy bài học</h2></div>`;return}let f=null;function p(){u.extraExercises,o.innerHTML=`
       <div class="header-bar">
         <button class="back-btn" onclick="navigateTo('#daily/${c}/${l}')">←</button>
         <div class="title">📝 Bài tập Bổ sung</div>
