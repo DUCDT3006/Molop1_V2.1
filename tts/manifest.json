@@ -19,6 +19,11 @@
     "clean": "Điền biểu tượng sao cho mỗi hàng và mỗi cột đều có đủ 4 loại biểu tượng khác nhau!",
     "src": "/Molop1_V2.1/tts/201df62dc4f6a.mp3"
   },
+  "16abe4bbdbea9e": {
+    "text": "Điền hình sao cho mỗi hàng và mỗi cột đều có đủ sáu loại hình khác nhau!",
+    "clean": "Điền hình sao cho mỗi hàng và mỗi cột đều có đủ sáu loại hình khác nhau!",
+    "src": "/Molop1_V2.1/tts/16abe4bbdbea9e.mp3"
+  },
   "180df2cbb31a79": {
     "text": "Dành cho phụ huynh: Chọn mức độ phù hợp để bé luyện thêm. Các bài tập được tạo từ nội dung đã học trong ngày.",
     "clean": "Dành cho phụ huynh: Chọn mức độ phù hợp để bé luyện thêm. Các bài tập được tạo từ nội dung đã học trong ngày.",
@@ -28,6 +33,16 @@
     "text": "1 + 1 = ?",
     "clean": "1 cộng 1 bằng ?",
     "src": "/Molop1_V2.1/tts/17c43e562f3cfd.mp3"
+  },
+  "18f2cf50dddcb6": {
+    "text": "Chọn kích thước lưới để bắt đầu!",
+    "clean": "Chọn kích thước lưới để bắt đầu!",
+    "src": "/Molop1_V2.1/tts/18f2cf50dddcb6.mp3"
+  },
+  "172631c13a1763": {
+    "text": "Bạn muốn chơi với số hay hình?",
+    "clean": "Bạn muốn chơi với số hay hình?",
+    "src": "/Molop1_V2.1/tts/172631c13a1763.mp3"
   },
   "12683277174d56": {
     "text": "Âm A, C & Số 1, 2, 3 — Mức nâng cao",
