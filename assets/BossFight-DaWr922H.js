@@ -1,4 +1,4 @@
-import{t as e}from"./index-DdBWtAAQ.js";import{a as t,c as n,i as r,n as i,o as a}from"./state-BDdBsVRV.js";function o(o,s){let{week:c,day:l}=s,u=n(c,l||5),d=i();if(!u||!u.isBossDay){o.innerHTML=`<div class="boss-fight-container" style="padding-top:100px">
+import{t as e}from"./index-CfmQQTCf.js";import{a as t,c as n,i as r,n as i,o as a}from"./state-BDdBsVRV.js";function o(o,s){let{week:c,day:l}=s,u=n(c,l||5),d=i();if(!u||!u.isBossDay){o.innerHTML=`<div class="boss-fight-container" style="padding-top:100px">
       <div class="boss-display">🔒</div><h2>Boss Fight chưa sẵn sàng</h2>
       <p style="color:var(--text-muted);margin:12px 0">Hoàn thành các bài học trong tuần để mở khóa!</p>
       <button class="btn btn-primary" onclick="navigateTo('#dashboard')">🏠 Về trang chủ</button></div>`;return}let f=u.bossFight,p=0,m=0,h=null,g=100,_=100/f.length;function v(){o.innerHTML=`
